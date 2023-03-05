@@ -65,3 +65,36 @@ async function generateQRcode (){
 
     download.href = await resolveDataUrl()
 }
+
+
+async function handleShare (){
+
+    setTimeout(async() =>{
+
+
+        try{
+
+        const base64url = await resolveDataUrl();
+        const blob = await ((await fetch(base64url)).blob())
+        const file = new file([blob], 'qrcode.png', {type: blob.type
+        
+        
+        
+        });
+
+
+     }
+
+     catch(error){
+
+
+
+
+        alert('Brower does not support this feature!')
+    }
+    },1000)
+
+    
+
+
+}
