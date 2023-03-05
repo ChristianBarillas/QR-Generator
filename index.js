@@ -23,7 +23,7 @@ size = 300;
 function handleDarkColor(e){
 
     colorDark = e.target.value;
-    generateQRcode;
+    generateQRcode();
 
 }
 
@@ -31,6 +31,37 @@ function handleDarkColor(e){
 function handleLightColor(e){
 
     colorLigth = e.target.value;
-    generateQRcode;
+    generateQRcode();
 
+}
+
+function handleQRText(e){
+
+    const value = e.target.value;
+
+    text = value;
+
+    if (!value){
+
+        text = defaultURL
+    }
+
+
+}
+
+
+async function generateQRcode (){
+
+    qrcontainer.innerHTML = '';
+    
+    new generateQRcode('qr-code', {
+
+        text,
+        height: size,
+        width:size,
+        colorLigth,
+        colorDark
+    } )
+
+    download.href = await resolveDataUrl()
 }
