@@ -16,7 +16,7 @@ sharebtn.addEventListener('click', handleShare);
 
 const defaultURL = "https://christianbarillas.github.io/Curriculum_Oficial/#"
 let colorLigth = '#fff',
-colorDark = '000',
+colorDark = '#000',
 text = defaultURL,
 size = 300;
 
@@ -54,7 +54,7 @@ async function generateQRcode (){
 
     qrcontainer.innerHTML = '';
     
-    new generateQRcode('qr-code', {
+    new QRCode('qr-code', {
 
         text,
         height: size,
