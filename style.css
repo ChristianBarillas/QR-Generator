@@ -1,0 +1,93 @@
+*{
+    box-sizing: border-box;
+
+}
+
+body{
+    background: linear-gradient(rgb(0, 147, 192) 60%, rgb(255, 255, 255) 40%);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    margin: 0 auto;
+}
+
+input[type ='color']{
+    border: none;
+    border-radius: 2px;
+    height: 40px;
+   
+}
+
+a{
+    text-decoration: none;
+}
+
+.qr-text{
+    display: block;
+   padding: 10px;
+   border: 1px solid black;
+   border-radius: 10px ;
+   width: 100%;
+   margin: 0.5rem 0 0.2rem 0;
+   outline: none;
+}
+
+
+#qr-code {
+
+    width: 500px;
+    height: 400px;
+ 
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   border: 1px solid black;
+}
+
+.row{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.sizes{
+    width: 32%;
+    height: 40px;
+    border: 1px solid black;
+    border-radius: 4px;
+    outline: none;
+
+}
+
+.btn {
+ max-width: 200px;
+ padding: 14px;
+ border-radius: 20px;
+border: none;
+display: flex;
+justify-content: center;
+align-items: center;
+cursor: pointer;
+font-size: 10px;
+flex: 1;
+}
+
+.btn{
+
+    width: 20px;
+    margin-left: 10px;
+}
+
+.accion-container{
+    display: flex;
+    margin-top: 1rem 0;
+}
+
+
+#qr-code img, #qr-code canvas {
+
+    max-width:100% !important;
+    max-height: 100% !important;
+}
