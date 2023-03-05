@@ -14,10 +14,10 @@ sizes.addEventListener('change', handleSize);
 sharebtn.addEventListener('click', handleShare);
 
 
-const defaultURL = "https://christianbarillas.github.io/Curriculum_Oficial/#"
+const defaultUrl = "https://christianbarillas.github.io/Curriculum_Oficial/#"
 let colorLigth = '#fff',
 colorDark = '#000',
-text = defaultURL,
+text = defaultUrl,
 size = 300;
 
 function handleDarkColor(e){
@@ -43,10 +43,10 @@ function handleQRText(e){
 
     if (!value){
 
-        text = defaultURL
+        text = defaultUrl
     }
 
-
+    generateQRcode();
 }
 
 
