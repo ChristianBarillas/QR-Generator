@@ -82,6 +82,13 @@ async function handleShare (){
         
         });
 
+        await navigator.share({
+
+
+            file:[file],
+            title: text
+        })
+
 
      }
 
