@@ -1,17 +1,20 @@
-const download = document.querySelector('.download');
-const sizes = document.querySelector('.sizes');
-const sharebtn = document.querySelector('.share-btn');
 const qrtext = document.querySelector('.qr-text');
 const qrcontainer = document.querySelector('#qr-code');
 const dark = document.querySelector('.dark');
-const light = document.querySelector('.light');
+const sizes = document.querySelector('.sizes');
 
+
+// const download = document.querySelector('.download');
+// const sharebtn = document.querySelector('.share-btn');
+// const light = document.querySelector('.light');
+// light.addEventListener('input', handleLightColor);
+// sharebtn.addEventListener('click', handleShare);
 
 dark.addEventListener('input', handleDarkColor);
-light.addEventListener('input', handleLightColor);
+
 qrtext.addEventListener('input', handleQRText);
 sizes.addEventListener('change', handleSize);
-sharebtn.addEventListener('click', handleShare);
+
 
 
 const defaultUrl = "https://christianbarillas.github.io/Curriculum_Oficial/#"

@@ -4,7 +4,7 @@
 }
 
 body{
-    background: linear-gradient(rgb(0, 147, 192) 60%, rgb(255, 255, 255) 40%);
+    background: linear-gradient(rgb(90, 66, 177) 30%, rgb(92, 61, 215) 60%);
     height: 100vh;
     display: flex;
     align-items: center;
