@@ -26,13 +26,16 @@ a{
 }
 
 .qr-text{
-    display: block;
+    display: inline-block;
    padding: 10px;
    border: 1px solid black;
    border-radius: 10px ;
    width: 100%;
    margin: 0.5rem 0 0.2rem 0;
    outline: none;
+   margin-top: 20px;
+   text-align: center;
+  
 }
 
 
@@ -40,6 +43,7 @@ a{
 
     width: 500px;
     height: 400px;
+    margin-top: 25px;
  
    display: flex;
    align-items: center;
@@ -50,7 +54,7 @@ a{
 .row{
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-around;
 }
 
 .sizes{
@@ -59,6 +63,7 @@ a{
     border: 1px solid black;
     border-radius: 4px;
     outline: none;
+  
 
 }
 
