@@ -4,18 +4,11 @@ const dark = document.querySelector('.dark');
 const sizes = document.querySelector('.sizes');
 
 
-// const download = document.querySelector('.download');
-// const sharebtn = document.querySelector('.share-btn');
-// const light = document.querySelector('.light');
-// light.addEventListener('input', handleLightColor);
-// sharebtn.addEventListener('click', handleShare);
-
 dark.addEventListener('input', handleDarkColor);
-
 qrtext.addEventListener('input', handleQRText);
 sizes.addEventListener('change', handleSize);
 
-
+// Define la URL predeterminada para el código QR
 
 const defaultUrl = "https://christianbarillas.github.io/Curriculum_Oficial/#"
 let colorLigth = '#fff',
@@ -23,6 +16,8 @@ colorDark = '#000',
 text = defaultUrl,
 size = 300;
 
+
+// Maneja el cambio en el color de fondo oscuro del código QR
 function handleDarkColor(e){
 
     colorDark = e.target.value;
@@ -30,7 +25,7 @@ function handleDarkColor(e){
 
 }
 
-
+// Maneja el cambio en el color de fondo claro del código QR
 function handleLightColor(e){
 
     colorLigth = e.target.value;
@@ -38,11 +33,15 @@ function handleLightColor(e){
 
 }
 
+// Maneja el cambio en el texto del código QR
+
 function handleQRText(e){
 
     const value = e.target.value;
 
     text = value;
+
+    // Si el valor está vacío, se utiliza la URL predeterminada
 
     if (!value){
 
@@ -53,10 +52,12 @@ function handleQRText(e){
 }
 
 
+
 async function generateQRcode (){
 
     qrcontainer.innerHTML = '';
     
+    // Usa la librería QRCode.js para generar el código QR
     new QRCode('qr-code', {
 
         text,
@@ -66,55 +67,20 @@ async function generateQRcode (){
         colorDark
     } )
 
+    // Agrega un enlace de descarga del código QR en formato PNG
     download.href = await resolveDataUrl()
 }
 
 
-async function handleShare (){
 
-    setTimeout(async() =>{
-
-
-        try{
-
-        const base64url = await resolveDataUrl();
-        const blob = await ((await fetch(base64url)).blob())
-        const file = new file([blob], 'qrcode.png', {type: blob.type
-        
-        
-        
-        });
-
-        await navigator.share({
-
-
-            file:[file],
-            title: text
-        })
-
-
-     }
-
-     catch(error){
-
-
-
-
-        alert('Brower does not support this feature!')
-    }
-    },1000)
-
-    
-
-
-}
-
-
+// Maneja el cambio en el tamaño del código QR
 function handleSize(e){
 
     size = e.target.value;
     generateQRcode();
 }
+
+// Resuelve la URL de los datos del código QR generado
 
 function resolveDataUrl (){
 
@@ -135,4 +101,5 @@ function resolveDataUrl (){
     })
 }
 
+// Genera el código QR al cargar la página
 generateQRcode()
